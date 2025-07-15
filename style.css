@@ -1,0 +1,210 @@
+/* Fullscreen Gradient Background */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+}
+
+/* Main container */
+main {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #a29bfe;
+  text-shadow: 0 0 10px #6c5ce7;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Question Progress */
+#progress {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: #81ecec;
+}
+
+/* Question box */
+#question-container {
+  background: rgba(20, 20, 30, 0.9);
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(108, 92, 231, 0.7);
+  min-height: 260px;
+  width: 100%;
+  animation: fadeInUp 0.5s ease;
+  position: relative;
+}
+
+#question-container.fade-out {
+  animation: fadeOutDown 0.5s forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  to {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+/* Question Text */
+.question label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px #6c5ce7;
+}
+
+/* Radio Buttons Styled as Bars */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.options label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.options label:hover {
+  transform: scale(1.02);
+}
+
+/* Hide native radio input */
+.options input[type="radio"] {
+  display: none;
+}
+
+/* Custom span bar */
+.options label span {
+  display: block;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #6c5ce7;
+  color: #dfe6e9;
+  font-weight: 600;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.3);
+}
+
+/* When selected */
+.options input[type="radio"]:checked + span {
+  background-color: #6c5ce7;
+  color: #fff;
+  box-shadow: 0 0 16px #a29bfe;
+  border-color: #a29bfe;
+}
+
+/* Text input */
+input[type="text"] {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  border: 1px solid #6c5ce7;
+  border-radius: 8px;
+  background: rgba(44, 53, 100, 0.75);
+  color: #f0f0f0;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.4);
+}
+
+input[type="text"]:focus {
+  border-color: #a29bfe;
+  outline: none;
+}
+
+/* Buttons */
+.controls {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+button {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0.5rem;
+  box-shadow: 0 0 12px #6c5ce7;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #a29bfe;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #3d3d5c;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Result messages */
+.failure-message,
+.success-message {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 2rem 1rem;
+  line-height: 1.6;
+}
+
+.failure-message {
+  color: #ff4d4d;
+  text-shadow: 0 0 15px #ff4d4d;
+}
+
+.success-message {
+  color: #00ff99;
+  text-shadow: 0 0 15px #00ff99;
+}
+
+.success-message a {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #00ff99;
+  text-decoration: underline;
+}

@@ -1,0 +1,49 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "radio",
+      "question": "1. Bạn có phải thầy Quang không?",
+      "options": ["Có", "Không"],
+      "answer": "không",
+      "failureMessage": "Không khuyến khích thầy vào nha thầy. ☺️"
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "question": "2. Nhập mã lớp của bạn",
+      "answer": "9b2526",
+      "failureMessage": "Sai mã lớp, chỉ có lớp 9B mới được vào nha!."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "question": "3. Trang web của lớp thầy Quang là gì? \"https://.../\"",
+      "answer": "https://hongbangoj.ucode.vn/",
+      "failureMessage": "Sai địa chỉ web!"
+    },
+    {
+      "id": "q4",
+      "type": "radio",
+      "question": "4. Ngôn ngữ lập trình mà thầy Quang dạy là gì?",
+      "options": ["Python", "Scratch", "Pascal", "HTML"],
+      "answer": "python",
+      "failureMessage": "Sai rồi! Gợi ý: con rắn 🐍"
+    },
+    {
+      "id": "q5",
+      "type": "radio",
+      "question": "5. Hãng máy tính mà thầy Quang hay dùng là gì?",
+      "options": ["Dell", "Alienware", "Asus", "Acer", "Lenovo"],
+      "answer": "Alienware",
+      "failureMessage": "Không đúng rồi! Laptop thầy thường là hãng gì ấy nhỉ?"
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "question": "6. Tên đầy đủ của server Discord lớp là gì? (viết chính xác)",
+      "answer": "Discord Lớp Thầy Quang (C++)",
+      "failureMessage": "Tên chưa đúng nha! Gợi ý: 'Discord... '"
+    }
+  ]
+}
