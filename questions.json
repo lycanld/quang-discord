@@ -26,9 +26,9 @@
       "id": "q4",
       "type": "radio",
       "question": "4. Ngôn ngữ lập trình mà thầy Quang dạy là gì?",
-      "options": ["Python", "Scratch", "Pascal", "HTML"],
-      "answer": "python",
-      "failureMessage": "Sai rồi! Gợi ý: con rắn 🐍"
+      "options": ["Python", "C++", "Pascal", "HTML"],
+      "answer": "C++",
+      "failureMessage": "Sai rồi! Gợi ý: include <bits/stdc++.h>"
     },
     {
       "id": "q5",
